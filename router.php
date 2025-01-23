@@ -7,4 +7,4 @@ Router::getMethod("/", [Controller::class, "home"]);
 
 Router::getMethod("/user", [Controller::class, "user"]);
 
-Router::getMethod("/login", [Controller::class, "login"]);
+Router::getMethod("/products", [Controller::class, "products"]);

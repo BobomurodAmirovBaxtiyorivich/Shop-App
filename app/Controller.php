@@ -13,4 +13,9 @@ class Controller
     {
         views('userInfo');
     }
+
+    public function products(): void
+    {
+        views('products');
+    }
 }
