@@ -18,4 +18,9 @@ class Controller
     {
         views('products');
     }
+
+    public function addProduct(): void
+    {
+        views('addProduct');
+    }
 }

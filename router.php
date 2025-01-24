@@ -8,3 +8,5 @@ Router::getMethod("/", [Controller::class, "home"]);
 Router::getMethod("/user", [Controller::class, "user"]);
 
 Router::getMethod("/products", [Controller::class, "products"]);
+
+Router::getMethod("/addProduct", [Controller::class, "addProduct"]);

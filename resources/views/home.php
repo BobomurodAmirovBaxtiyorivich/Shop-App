@@ -65,8 +65,11 @@ views("components/navbar");
     </div>
 </div>
 
+<button id="scrollToTopBtn" class="fixed bottom-10 right-10 p-4 bg-blue-500 text-white rounded-full shadow-lg">
+    ↑
+</button>
+
 <script>
-    // Slider 1 uchun funksional
     const slider1 = document.getElementById('slider1');
     let index1 = 0;
 
@@ -78,7 +81,6 @@ views("components/navbar");
         slider1.style.transform = `translateX(-${index1 * 100}%)`;
     }
 
-    // Slider 2 uchun funksional
     const slider2 = document.getElementById('slider2');
     let index2 = 0;
 
@@ -90,10 +92,28 @@ views("components/navbar");
         slider2.style.transform = `translateX(-${index2 * 100}%)`;
     }
 
-    // Har bir slayder uchun interval qo'yish
     setInterval(autoSlide1, 3000);
     setInterval(autoSlide2, 3000);
 </script>
+
+<script>
+    window.onscroll = function () {
+        let button = document.getElementById("scrollToTopBtn");
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            button.style.display = "block";
+        } else {
+            button.style.display = "none";
+        }
+    };
+
+    document.getElementById("scrollToTopBtn").addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>
+
 <?php
 views("components/footer");
 ?>

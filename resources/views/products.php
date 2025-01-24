@@ -13,8 +13,8 @@ views("components/navbar");
                  class="object-cover w-full h-80 rounded-t-lg"/>
         </div>
         <div class="p-4 flex flex-col items-center justify-center text-center">
-            <h6 class="mb-2 text-slate-800 text-xl font-semibold">Website Review Check</h6>
-            <h5 class="mb-2 text-slate-800 bg-yellow-400 text-xl font-semibold rounded-lg px-4 py-2">Website Review Check</h5>
+            <h6 class="mb-2 text-slate-800 text-xl font-semibold">Product name</h6>
+            <h5 class="mb-2 text-slate-800 bg-yellow-400 text-xl font-semibold rounded-lg px-4 py-2">Product price</h5>
         </div>
     </div>
     <div class="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96">
@@ -24,8 +24,8 @@ views("components/navbar");
                  class="object-cover w-full h-80 rounded-t-lg"/>
         </div>
         <div class="p-4 flex flex-col items-center justify-center text-center">
-            <h6 class="mb-2 text-slate-800 text-xl font-semibold">Website Review Check</h6>
-            <h5 class="mb-2 text-slate-800 bg-yellow-400 text-xl font-semibold rounded-lg px-4 py-2">Website Review Check</h5>
+            <h6 class="mb-2 text-slate-800 text-xl font-semibold">Product name</h6>
+            <h5 class="mb-2 text-slate-800 bg-yellow-400 text-xl font-semibold rounded-lg px-4 py-2">Product price</h5>
         </div>
     </div>
     <div class="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96">
@@ -35,8 +35,8 @@ views("components/navbar");
                  class="object-cover w-full h-80 rounded-t-lg"/>
         </div>
         <div class="p-4 flex flex-col items-center justify-center text-center">
-            <h6 class="mb-2 text-slate-800 text-xl font-semibold">Website Review Check</h6>
-            <h5 class="mb-2 text-slate-800 bg-yellow-400 text-xl font-semibold rounded-lg px-4 py-2">Website Review Check</h5>
+            <h6 class="mb-2 text-slate-800 text-xl font-semibold">Product name</h6>
+            <h5 class="mb-2 text-slate-800 bg-yellow-400 text-xl font-semibold rounded-lg px-4 py-2">Product price</h5>
         </div>
     </div>
     <div class="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96">
@@ -46,8 +46,8 @@ views("components/navbar");
                  class="object-cover w-full h-80 rounded-t-lg"/>
         </div>
         <div class="p-4 flex flex-col items-center justify-center text-center">
-            <h6 class="mb-2 text-slate-800 text-xl font-semibold">Website Review Check</h6>
-            <h5 class="mb-2 text-slate-800 bg-yellow-400 text-xl font-semibold rounded-lg px-4 py-2">Website Review Check</h5>
+            <h6 class="mb-2 text-slate-800 text-xl font-semibold">Product name</h6>
+            <h5 class="mb-2 text-slate-800 bg-yellow-400 text-xl font-semibold rounded-lg px-4 py-2">Product price</h5>
         </div>
     </div>
     <div class="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96">
@@ -57,8 +57,8 @@ views("components/navbar");
                  class="object-cover w-full h-80 rounded-t-lg"/>
         </div>
         <div class="p-4 flex flex-col items-center justify-center text-center">
-            <h6 class="mb-2 text-slate-800 text-xl font-semibold">Website Review Check</h6>
-            <h5 class="mb-2 text-slate-800 bg-yellow-400 text-xl font-semibold rounded-lg px-4 py-2">Website Review Check</h5>
+            <h6 class="mb-2 text-slate-800 text-xl font-semibold">Product name</h6>
+            <h5 class="mb-2 text-slate-800 bg-yellow-400 text-xl font-semibold rounded-lg px-4 py-2">Product price</h5>
         </div>
     </div>
     <div class="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96">
@@ -68,12 +68,33 @@ views("components/navbar");
                  class="object-cover w-full h-80 rounded-t-lg"/>
         </div>
         <div class="p-4 flex flex-col items-center justify-center text-center">
-            <h6 class="mb-2 text-slate-800 text-xl font-semibold">Website Review Check</h6>
-            <h5 class="mb-2 text-slate-800 bg-yellow-400 text-xl font-semibold rounded-lg px-4 py-2">Website Review Check</h5>
+            <h6 class="mb-2 text-slate-800 text-xl font-semibold">Product name</h6>
+            <h5 class="mb-2 text-slate-800 bg-yellow-400 text-xl font-semibold rounded-lg px-4 py-2">Product price</h5>
         </div>
     </div>
 </div>
 
+<button id="scrollToTopBtn" class="fixed bottom-10 right-10 p-4 bg-blue-500 text-white rounded-full shadow-lg">
+    ↑
+</button>
+
+<script>
+    window.onscroll = function () {
+        let button = document.getElementById("scrollToTopBtn");
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            button.style.display = "block";
+        } else {
+            button.style.display = "none";
+        }
+    };
+
+    document.getElementById("scrollToTopBtn").addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>
 
 <?php
 views("components/footer");
